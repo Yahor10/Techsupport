@@ -3,28 +3,27 @@ using System.Collections;
 
 public class RoadMoveScript : MonoBehaviour {
 
+	public float speed = 120;
+
+	public float totalLength = 300;
+
+	public float blockLength = 25;
+
 	private float z;
 
 	private float lastZ;
 
-	private Hashtable roadSegments = new Hashtable();
-
 	void Start () {
-		rigidbody.velocity = new Vector3 (0, 0, -120);
-//		GameObject[] gameObjects = FindObjectsOfType<GameObject> ();
-//		foreach (GameObject tempObject in gameObjects) {
-//			if (tempObject.name.Contains("Segment")) {
-//				roadSegments.Add (tempObject.transform.position.z, tempObject);
-//				print (tempObject.name);
-//			}
-//		}
+		rigidbody.velocity = new Vector3 (0, 0, -speed);
 	}
 
 	void Update () {
 		z += transform.position.z - lastZ;
 		lastZ = transform.position.z;
-		if (z < -325) {
-			transform.position = new Vector3 (0, 152, -301);
+		if (z < -(totalLength + blockLength)) {
+			Vector3 updatedPosition = transform.position;
+			updatedPosition.z = -totalLength;
+			transform.position = updatedPosition;
 		}
 	}
 }
