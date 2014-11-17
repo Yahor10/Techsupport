@@ -46,6 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\ObstacleGeneratorScript.cs" />
+     <Compile Include="Assets\Script\ObstacleMoveScript.cs" />
      <Compile Include="Assets\Script\RoadMoveScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
