@@ -22,6 +22,19 @@ Mobile game on Unity 3D engine
 У персонажа будут активные и пассивные навыки и способности
 
 
+Движения камеры:
+Zoom in/Zoom out
+Rotate,Left side,Right Side
+
+
+Список графических элементов на экране
+<ol>
+<li>Расстояние до цели</li>
+<li>Пульс</li>
+<li>Полоса здоровья</li>
+<li>Полоса ускорения появляется при ускорении </li>
+<li>Полоса уровня радиации</li>
+</ol>
 
 Examples:
 Maze runner on Google play
