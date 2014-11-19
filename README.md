@@ -23,10 +23,11 @@ Mobile game on Unity 3D engine
 
 
 Движения камеры:
-
 Zoom in/Zoom out
 Rotate,Left side,Right Side
 
+
+Список графических элементов на экране
 
 Examples:
 Maze runner on Google play
