@@ -7,11 +7,9 @@ public class ObstacleMoveScript : MonoBehaviour {
 
 	public float destroyOffset = 300;
 
-	void Start () {
-		rigidbody.velocity = new Vector3 (0, 0, -speed);
-	}
-
 	void Update () {
+		Vector3 currentPosition = transform.position;
+		transform.position = new Vector3 (currentPosition.x, currentPosition.y, transform.position.z - speed * Time.deltaTime);
 		if (transform.position.z < -destroyOffset) {
 			Destroy(gameObject);
 		}
