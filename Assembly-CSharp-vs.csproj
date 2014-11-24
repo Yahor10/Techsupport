@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\ObstacleGeneratorScript.cs" />
      <Compile Include="Assets\Scripts\ObstacleMoveScript.cs" />
      <Compile Include="Assets\Scripts\RoadMoveScript.cs" />
+     <Compile Include="Assets\Scripts\RollScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
