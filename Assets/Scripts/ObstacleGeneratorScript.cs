@@ -3,7 +3,9 @@ using System.Collections;
 
 public class ObstacleGeneratorScript : MonoBehaviour {
 
-	public Transform obstaclePrefab;
+	public Transform barrelPrefab;
+
+	public Transform boxPrefab;
 
 	public float[] positions = new float[] {-10, 0, 10};
 
@@ -16,7 +18,12 @@ public class ObstacleGeneratorScript : MonoBehaviour {
 	void Update () {
 		timePassed += Time.deltaTime;
 		if (timePassed > 1) {
-			Transform obstacle = Instantiate(obstaclePrefab) as Transform;
+			Transform obstacle;
+			if (Random.Range (0, 2) == 0) {
+				obstacle = Instantiate(barrelPrefab) as Transform;
+			} else {
+				obstacle = Instantiate(boxPrefab) as Transform;
+			}
 			obstacle.position = new Vector3 (positions[Random.Range(0, 3)], 4, 600);
 			timePassed = 0;
 		}
